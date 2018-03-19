@@ -31,10 +31,12 @@ app.controller("myLoveController", function ($scope) {
             }
         ]
     };
+
     dealLoveDate($scope,data);
 
-    $scope.talkLove = function (){
+    $scope.talkLove = function (id){
 
+        $scope['myLoveTalk'+id] = true;
     }
 });
 
