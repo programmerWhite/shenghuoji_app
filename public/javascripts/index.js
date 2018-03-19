@@ -8,10 +8,16 @@ var app = angular.module('app',['ngRoute'])
             .when('/login',{templateUrl:'login'})
             .when('/sign',{templateUrl:'sign'})
             .when('/home',{templateUrl:'home'})
-            .otherwise({redirectTo:'home'});
+            .when('/findPassword',{templateUrl:'findPassword'})
+            .when('/myLove',{
+                templateUrl:'myLove',
+                controller:"myLoveController"
+            })
+            .otherwise({redirectTo:'login'});
 });
 
 // contact page controller
 app.controller('myAppController', function($scope) {
-    $scope.indexName = "index";
+
 });
+

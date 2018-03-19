@@ -15,4 +15,10 @@ module.exports = function (app){
   app.get('/home',function(req,res,next){
     res.render("home");
   });
+  app.get('/findPassword',function(req,res,next){
+    res.render("findPassword");
+  });
+  app.get('/myLove',function(req,res,next){
+    res.render("myLove");
+  });
 };

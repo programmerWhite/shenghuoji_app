@@ -1,0 +1,57 @@
+.my-love-page-div{
+    padding: 10px;
+    box-sizing: border-box;
+}
+.love-part-one-div{
+    border:none;
+    border-bottom: 1px solid #CCCCCC;
+    padding: 10px 0;
+}
+.love-photo-img{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.love-date-text{
+    font-size: 12px;
+    color: #CCCCCC;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.love-text-dom{
+    color: #333333;
+    font-size: 12px;
+    line-height: 30px;
+}
+.img-container-div{
+    display: flex;
+    justify-content: flex-start;
+}
+.love-img-obj-div{
+    width: 25%;
+    height: 80px;
+    margin-right: 5px;
+}
+.love-img-obj{
+    width: 100%;
+    height: inherit;
+    background-position: center center !important;
+    background-size: cover !important;
+}
+.love-one-talk-div{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+.love-one-talk-button{
+    width: 60px;
+    height: 26px;
+    background-color: #3399fd;
+    text-align: center;
+    line-height: 26px;
+    color: white;
+    font-size: 12px;
+}

@@ -2,16 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="telephone=yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>Title</title>
     <script src="/public/javascripts/tool/angular.min.js"></script>
     <script src="/public/javascripts/tool/angular-route.js"></script>
+    <script src="/public/javascripts/index.js"></script>
+
 </head>
 <body style="margin: 0px">
     <div ng-app="app" ng-controller="myAppController">
-        <div style="position: fixed;height: 100%;width: 100%" ng-view>
+        <div style="position: absolute;width: 100%;" ng-view>
             home
         </div>
     </div>
 </body>
-    <script src="/public/javascripts/index.js"></script>
+    <script src="/public/javascripts/myLove.js"></script>
+
 </html>

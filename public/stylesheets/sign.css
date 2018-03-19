@@ -2,6 +2,7 @@
     position: relative;
     height: inherit;
     width: inherit;
+    min-height: 550px;
     background-color: #86d3c6;
 }
 .sign-head-img{
