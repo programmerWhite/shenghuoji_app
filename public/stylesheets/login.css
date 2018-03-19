@@ -1,0 +1,74 @@
+
+.input-line-div{
+    height: 40px;
+    width: 300px;
+    margin:0 auto;
+    margin-bottom: 30px;
+}
+.input-style-dom{
+    height: 30px;
+    width:300px;
+    border:none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+}
+.wy-input-label{
+    color: white;
+    font-size: 14px;
+}
+.login-button-div{
+    width: 300px;
+    color: white;
+    margin:0 auto;
+    font-size: 16px;
+    background-color: #3399fd;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+.login-page-all-div{
+    position: relative;
+    height: inherit;
+    width: inherit;
+    background-color: #86d3c6;
+}
+.bottom-line-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    width: 300px;
+    position: absolute;
+    bottom:0px;
+    box-sizing: border-box;
+    left:50%;
+    margin-left: -150px;
+}
+.sign-button-div{
+    width: 70px;
+    height: 30px;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border:1px solid white;
+    font-size: 12px;
+    border-radius:18px;
+}
+.login-page-name{
+    padding-top:10px;
+    margin-top: 0px;
+}
+.forget-password-text{
+    font-size: 14px;
+    color: white;
+}
+.login-head-img{
+    width: 140px;
+    margin:0 auto;
+    border-radius: 100%;
+}
+.login-head-img-div{
+    text-align: center;
+    padding: 30px ;
+    position: relative;
+}

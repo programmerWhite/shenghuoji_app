@@ -1,0 +1,55 @@
+.sign-page-all-div{
+    position: relative;
+    height: inherit;
+    width: inherit;
+    background-color: #86d3c6;
+}
+.sign-head-img{
+    width: 140px;
+    margin:0 auto;
+    border-radius: 100%;
+}
+
+.sign-head-img-div{
+    text-align: center;
+    padding: 30px ;
+    position: relative;
+}
+.input-line-div{
+    height: 40px;
+    width: 300px;
+    margin:0 auto;
+    margin-bottom: 30px;
+}
+.input-style-dom{
+    height: 30px;
+    width:300px;
+    border:none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+}
+.wy-input-label{
+    color: white;
+    font-size: 14px;
+}
+.login-button-div{
+    width: 300px;
+    color: white;
+    margin:0 auto;
+    font-size: 16px;
+    background-color: #3399fd;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+.back-login-page{
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    left:20px;
+    top: 20px;;
+}
+.back-login-page a{
+    color: white;
+    text-decoration: none;
+}

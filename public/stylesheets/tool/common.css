@@ -1,0 +1,58 @@
+/*input label move animation start*/
+.wy-input-line-div{
+    position: relative;
+}
+
+.wy-input-label{
+    position: absolute;
+    top: 0px;
+    left:0px;
+    transition: all 0.3s linear;
+}
+
+.input-style-dom:focus + .wy-input-label{
+    top:-20px;
+    transition: all 0.1s linear;
+}
+
+/*input label move animation end*/
+
+/*rotate y animation start*/
+    .rotate-y-animation{
+        -webkit-animation:rotateChange 1.2s 1 forwards;
+        -o-animation:rotateChange 1.2s 1 forwards;
+        animation:rotateChange 1.2s 1 forwards;
+    }
+    @keyframes rotateChange {
+        0%{
+            transform: rotateY(180deg);
+        }
+        100%{
+            transform: rotateY(0deg);
+        }
+    }
+/*rotate y animation end*/
+.h1{
+    font-size: 30px;
+}
+.text-center{
+    text-align: center;
+}
+.m-bottom-20{
+    margin-bottom: 20px;
+}
+.m-bottom-40{
+    margin-bottom: 40px;
+}
+.m-bottom-60{
+    margin-bottom: 60px;
+}
+.m-top-20{
+    margin-top: 20px;
+}
+.m-top-40{
+    margin-top: 40px;
+}
+.m-bottom-60{
+    margin-top: 60px;
+}
