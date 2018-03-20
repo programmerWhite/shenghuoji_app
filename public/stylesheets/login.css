@@ -34,6 +34,7 @@ body{
     width: inherit;
     min-height: 500px;
     background-color: #86d3c6;
+    display: block !important;
 }
 .bottom-line-div{
     display: flex;

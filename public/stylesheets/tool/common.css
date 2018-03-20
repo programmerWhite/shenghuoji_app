@@ -23,6 +23,14 @@
         -o-animation:rotateChange 1.2s 1 forwards;
         animation:rotateChange 1.2s 1 forwards;
     }
+    @-webkit-keyframes rotateChange{
+        0%{
+            transform: rotateY(180deg);
+        }
+        100%{
+            transform: rotateY(0deg);
+        }
+    }
     @keyframes rotateChange {
         0%{
             transform: rotateY(180deg);
@@ -37,6 +45,9 @@
 }
 .text-center{
     text-align: center;
+}
+.m-bottom-10{
+    margin-bottom: 10px;
 }
 .m-bottom-20{
     margin-bottom: 20px;
@@ -55,4 +66,34 @@
 }
 .m-bottom-60{
     margin-top: 60px;
+}
+.font-size-12{
+    font-size: 12px;
+}
+.font-size-14{
+    font-size: 14px;
+}
+.font-size-16{
+    font-size: 16px;
+}
+.font-size-18{
+    font-size: 18px;
+}
+.font-size-20{
+    font-size: 20px;
+}
+.color-white{
+    color: white;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+.text-line-none{
+    text-decoration: none;
 }

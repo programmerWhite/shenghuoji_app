@@ -1,23 +1,30 @@
-<link href="/public/stylesheets/tool/common.css" rel="stylesheet">
 <link href="/public/stylesheets/myLove.css" rel="stylesheet">
 
-<div class="my-love-page-div" ng-controller="myLoveController">
-    <div class="love-part-one-div" ng-repeat="(key,value) in dateData">
-        <div class="love-line-div">
-            <img class="love-photo-img" src="{{value.photo}}">
-            <span class="love-date-text">{{value.date}}</span>
-        </div>
-        <div class="love-text-dom" ng-bind="value.loveText"></div>
-        <div class="img-container-div">
-            <div class="love-img-obj-div" ng-repeat="(subKey,subValue) in value.photoArray">
-                <div class="love-img-obj" style="background: url('{{subValue}}')"></div>
+<div class="my-love-page-div" ng-controller="myLoveController" style="display: none">
+    <div class="my-home-head-div">
+        <span class="color-white">
+            <a href="#/myHome" class="color-white text-line-none">BACK</a>
+        </span>
+        <span class="font-size-18 color-white">生活记</span>
+    </div>
+    <div class="love-page-content-div">
+        <div class="love-part-one-div" ng-repeat="(key,value) in dateData">
+            <div class="love-line-div">
+                <img class="love-photo-img" src="{{value.photo}}">
+                <span class="love-date-text">{{value.date}}</span>
             </div>
+            <div class="love-text-dom" ng-bind="value.loveText"></div>
+            <div class="img-container-div">
+                <div class="love-img-obj-div" ng-repeat="(subKey,subValue) in value.photoArray">
+                    <div class="love-img-obj" ng-click="previewImg(subKey,value.photoArray)" style="background: url('{{subValue}}')"></div>
+                </div>
+            </div>
+            <div class="love-one-talk-div">
+                <div class="love-one-talk-button" ng-click="talkLove(value.id)">评论</div>
+            </div>
+            <div id="myLoveTalkContainer{{value.id}}"  ng-show="myLoveTalk{{value.id}}"></div>
         </div>
-        <div class="love-one-talk-div">
-            <div class="love-one-talk-button" ng-click="talkLove(value.id)">评论</div>
-        </div>
-        <div class="myLoveTalkContainer" ng-show="myLoveTalk{{value.id}}">talk</div>
     </div>
 </div>
 
-<script src="/public/javascripts/myLove.js"></script>
+<!--<script src="/public/javascripts/myLove.js"></script>-->

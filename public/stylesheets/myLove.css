@@ -1,4 +1,7 @@
 .my-love-page-div{
+    display: block !important;
+}
+.love-page-content-div{
     padding: 10px;
     box-sizing: border-box;
 }
@@ -29,11 +32,15 @@
 .img-container-div{
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 .love-img-obj-div{
-    width: 25%;
+    width: 30%;
+    max-width: 120px;
     height: 80px;
     margin-right: 5px;
+    margin-bottom: 5px;
+    flex-shrink: 0;
 }
 .love-img-obj{
     width: 100%;
@@ -47,11 +54,77 @@
     margin-top: 20px;
 }
 .love-one-talk-button{
-    width: 60px;
-    height: 26px;
+    width: 50px;
+    height: 22px;
     background-color: #3399fd;
     text-align: center;
-    line-height: 26px;
+    line-height: 22px;
     color: white;
     font-size: 12px;
+}
+.talk-name-text{
+    font-size: 12px;
+    color: #666666;
+}
+.talk-text-content{
+    font-size: 12px;
+    color: #666666;
+}
+.text-area-dom{
+    width: 260px;
+    border:1px solid #CCCCCC;
+    resize: none;
+    height: 30px;
+    padding: 5px ;
+    box-sizing: border-box;
+}
+.submit-talk-button{
+    width: 60px;
+    height: 30px;
+    background-color: #3399fd;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.submit-talk-button-container{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    margin-top: 10px;
+    align-items: center;
+    width: 300px;
+}
+.preview-img-shade-div{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top:0px;
+    z-index: 100;
+    background-color: rgba(255,255,255,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.preview-img-dom{
+    max-width: 100%;
+    max-height: 100%;
+}
+.close-preview-img-span{
+    color: #3399fd;
+    position: absolute;
+    right:20px;
+    top: 20px;
+    font-size: 30px;
+}
+.my-home-head-div{
+    height: 50px;
+    background-color: #86d3c6;
+    display: flex;
+    align-items:center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    justify-content: space-between;
 }

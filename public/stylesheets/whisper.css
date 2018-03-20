@@ -1,0 +1,88 @@
+.whisper-page-all-div{
+    display: block !important;
+}
+.my-home-head-div{
+    height: 50px;
+    background-color: #86d3c6;
+    display: flex;
+    align-items:center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+.color-grey{
+    color: #666666;
+}
+.color-pink{
+    color: deeppink;
+}
+.whisper-notice-div{
+    text-align: center;
+}
+.whisper-notice-div span{
+    display: block;
+}
+.whisper-get-button{
+    width: 80px;
+    height: 30px;
+    background-color: #3399fd;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-size: 12px;
+    margin:20px auto;
+}
+.whisper-new-one{
+    padding: 10px;
+    box-sizing: border-box;
+}
+.whisper-new-one-head-div{
+    color: #666666;
+    margin-top: 20px;
+}
+.whisper-new-one-text{
+    width: 100%;
+    padding:30px 10px;
+    box-sizing: border-box;
+    text-align: center;
+    color: deeppink;
+}
+.whisper-edit-div{
+    width: 100%;
+    height: 100px;
+    border:1px solid #CCCCCC;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.send-whisper-button{
+    width: 60px;
+    height: 26px;
+    background-color: #3399fd;
+    text-align: center;
+    line-height: 26px;
+    color: white;
+    font-size: 12px;
+}
+.send-whisper-button-container{
+    width: 60px;
+    margin-left: 10px;
+    flex-shrink: 0;
+}
+.send-whisper-container-div{
+    position: fixed;
+    bottom: 10px;
+    left: 0px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+.send-whisper-inner-div{
+    width: 100%;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    display: flex;
+}
+.border-top{
+    border-top:1px solid #CCCCCC;
+}

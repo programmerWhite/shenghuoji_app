@@ -21,4 +21,10 @@ module.exports = function (app){
   app.get('/myLove',function(req,res,next){
     res.render("myLove");
   });
+  app.get('/myHome',function(req,res,next){
+    res.render("myHome");
+  });
+  app.get('/whisper',function(req,res,next){
+    res.render("whisper");
+  });
 };
