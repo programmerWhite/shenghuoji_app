@@ -4,7 +4,10 @@
 var app = angular.module('app',['ngRoute'])
     .config(function($routeProvider) {
         $routeProvider
-            .when('/',{templateUrl:'login'})
+            .when('/',{
+                templateUrl:'login',
+                controller:"loginController"
+            })
             .when('/login',{
                 templateUrl:'login',
                 controller:"loginController"

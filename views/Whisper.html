@@ -1,0 +1,35 @@
+<link href="/public/stylesheets/whisper.css" rel="stylesheet">
+
+<div class="whisper-page-all-div" style="display: none">
+    <div class="my-home-head-div">
+        <span class="color-white">
+            <a href="#/myHome" class="color-white text-line-none">BACK</a>
+        </span>
+        <span class="font-size-18 color-white">生活记</span>
+    </div>
+    <div class="whisper-notice-div" ng-show="noLove">
+        <span class="font-size-14 color-grey m-top-40 m-bottom-20">你还没有找到那个</span>
+        <span class="font-size-18 color-pink">他 或者 她，</span>
+        <span class="font-size-14 color-grey m-top-20">还不能使用悄悄话功能。</span>
+
+        <div class="whisper-get-button">去寻找</div>
+    </div>
+    <div class="whisper-new-one" ng-hide="noLove">
+        <div class="whisper-new-one-head-div font-size-14">
+            TA 在
+            <span ng-bind="whisperTime"></span> 悄悄对你说：
+        </div>
+        <div class="whisper-new-one-text font-size-20" ng-bind="whisperContent"></div>
+        <div class="send-whisper-container-div border-top">
+            <div class="font-size-14 m-bottom-10">给TA一条消息：</div>
+            <div class="send-whisper-inner-div">
+                <div class="whisper-edit-div" ng-model="whisperText" contenteditable="true"></div>
+                <div class="send-whisper-button-container">
+                    <div>表情</div>
+                    <div class="send-whisper-button">咻</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
