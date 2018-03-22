@@ -15,6 +15,13 @@
     transition: all 0.1s linear;
 }
 
+.wy-input-no-empty{
+    top:-20px;
+}
+.input-error-label{
+    color: red;
+    font-size: 12px;
+}
 /*input label move animation end*/
 
 /*rotate y animation start*/

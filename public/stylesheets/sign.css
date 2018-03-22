@@ -4,6 +4,10 @@
     width: inherit;
     min-height: 550px;
     background-color: #86d3c6;
+    display: block !important;
+}
+body{
+    background-color: #86d3c6;
 }
 .sign-head-img{
     width: 140px;
@@ -53,4 +57,18 @@
 .back-login-page a{
     color: white;
     text-decoration: none;
+}
+.send-author-code-button{
+    background-color: #3399fd;
+    color: white;
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 15px;
+    position: absolute;
+    right: 10px;
+    top: -2px;
+    font-size: 12px;
+    cursor: pointer;
 }

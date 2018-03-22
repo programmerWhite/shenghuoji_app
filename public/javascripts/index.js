@@ -2,7 +2,7 @@
  * Created by Raintree on 2018/3/19.
  */
 var app = angular.module('app',['ngRoute'])
-    .config(function($routeProvider) {
+    .config(function($routeProvider,$locationProvider) {
         $routeProvider
             .when('/',{
                 templateUrl:'login',
@@ -12,7 +12,10 @@ var app = angular.module('app',['ngRoute'])
                 templateUrl:'login',
                 controller:"loginController"
             })
-            .when('/sign',{templateUrl:'sign'})
+            .when('/sign',{
+                templateUrl:'sign',
+                controller:"signPageController"
+            })
             .when('/home',{templateUrl:'home'})
             .when('/findPassword',{templateUrl:'findPassword'})
             .when('/myHome',{templateUrl:'myHome'})
@@ -25,7 +28,9 @@ var app = angular.module('app',['ngRoute'])
                 controller:"whisperController"
             })
             .otherwise({redirectTo:'login'});
-});
+
+        $locationProvider.hashPrefix('');
+    });
 
 // contact page controller
 app.controller('myAppController', function($scope) {
