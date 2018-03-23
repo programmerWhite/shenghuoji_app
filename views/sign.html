@@ -9,41 +9,35 @@
     </div>
     <form name="myForm">
         <div class="input-line-div wy-input-line-div">
-            <input class="wy-input-dom input-style-dom" name="email" type="email" ng-model="userEmail" required>
-
+            <input class="wy-input-dom input-style-dom" name="email" type="text" ng-model="userEmail" ng-focus="signFocus('email')" required>
             <label class="wy-input-label" ng-class="{'wy-input-no-empty':myForm.email.$dirty,'':myForm.email.$pristine}">邮箱</label>
 
-            <label class="input-error-label" ng-show="myForm.email.$dirty && myForm.email.$invalid">
-                <span ng-show="myForm.email.$error.email">请输入正确的邮箱。</span>
-            </label>
+            <label class="input-error-label" ng-show="emailStatusText" ng-bind="emailStatusText"></label>
 
-            <div class="send-author-code-button" ng-click="sendAuthCode()">发送</div>
+            <!--发送验证码按钮-->
+            <div class="send-author-code-button" ng-click="sendAuthCode()" ng-bind="sendButtonText"></div>
         </div>
         <div class="input-line-div wy-input-line-div">
-            <input class="input-style-dom wy-input-dom" minlength="8" name="password" type="password" ng-model="userPassword" required>
-
+            <input class="input-style-dom wy-input-dom" name="password" type="password" ng-focus="signFocus('password')" ng-model="userPassword" required>
             <label class="wy-input-label" ng-class="{'wy-input-no-empty':myForm.password.$dirty,'':myForm.password.$pristine}">密码</label>
 
-            <label class="input-error-label" ng-show="myForm.password.$dirty && myForm.email.$invalid">
-                <span ng-show="myForm.password.$error.required">请输入密码</span>
-                <span ng-show="myForm.password.$error.minlength">密码最少8位</span>
-            </label>
+            <label class="input-error-label" ng-show="passwordErrorText" ng-bind="passwordErrorText"></label>
+
         </div>
         <div class="input-line-div wy-input-line-div">
-            <input class="input-style-dom wy-input-dom" name="againPassword" type="password" compare-pwd="password" ng-model="againUserPassword">
-
+            <input class="input-style-dom wy-input-dom" name="againPassword" type="password" ng-focus="signFocus('angilPassword')" ng-model="againUserPassword">
             <label class="wy-input-label" ng-class="{'wy-input-no-empty':myForm.againPassword.$dirty,'':myForm.againPassword.$pristine}">再一次密码</label>
 
-            <label class="input-error-label" ng-show="userPassword != againUserPassword && !!againUserPassword">两次密码不相同</label>
+            <label class="input-error-label" ng-show="angilPasswordErrorText" ng-bind="angilPasswordErrorText"></label>
 
         </div>
         <div class="input-line-div wy-input-line-div">
-            <input class="input-style-dom wy-input-dom" name="authCode" type="text" ng-model="authCode" required>
+            <input class="input-style-dom wy-input-dom" name="authCode" type="text" ng-model="authCode" ng-focus="signFocus('authCode')" required>
             <label class="wy-input-label" ng-class="{'wy-input-no-empty':myForm.authCode.$dirty,'':myForm.authCode.$pristine}">验证码</label>
 
-            <label class="input-error-label" ng-show="myForm.authCode.$error.require">验证码不能为空</label>
+            <label class="input-error-label" ng-show="authCodeTypeText" ng-bind="authCodeTypeText"></label>
 
         </div>
     </form>
-    <div class="login-button-div m-top-40 " id="signButton">注册</div>
+    <div class="login-button-div m-top-40 " ng-click="signUser()">注册</div>
 </div>

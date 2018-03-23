@@ -6,16 +6,16 @@
     </div>
     <form name="myForm">
         <div class="input-line-div wy-input-line-div">
-            <input class="wy-input-dom input-style-dom" name="userName" type="text" ng-model="userName" required>
+            <input class="wy-input-dom input-style-dom" name="userName" ng-focus="loginFocus('userName')" type="text" ng-model="userName" required>
             <label class="wy-input-label" ng-class="{'wy-input-no-empty':myForm.userName.$dirty,'':myForm.userName.$pristine,}">用户名或邮箱</label>
 
-            <label class="input-error-label" ng-show="myForm.userName.$error.required && myForm.userName.$dirty">请输入你的用户名或邮箱</label>
+            <label class="input-error-label" ng-show="userNameText" ng-bind="userNameText"></label>
         </div>
         <div class="input-line-div wy-input-line-div">
-            <input class="input-style-dom wy-input-dom" name="password" type="password" ng-model="userPassword" required>
+            <input class="input-style-dom wy-input-dom" name="password" ng-focus="loginFocus('password')" type="password" ng-model="userPassword" required>
             <label class="wy-input-label" ng-class="{'wy-input-no-empty':myForm.password.$dirty,'':myForm.password.$pristine,}">密码</label>
 
-            <label  class="input-error-label" ng-show="myForm.password.$error.required && myForm.password.$dirty">密码不能为空</label>
+            <label class="input-error-label" ng-show="userPasswordText" ng-bind="userPasswordText"></label>
         </div>
     </form>
     <div class="login-button-div m-top-40 " ng-click="loginSystem()">登录</div>

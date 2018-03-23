@@ -4,14 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
-var users = require('./routes/users');
-var certified  = require('./routes/certified');
+var expressSession = require('express-session');
 
 var app = express();
-
-users(app);
-certified(app);
 
 // view engine setup
 // view engine setup
@@ -22,11 +17,27 @@ app.set('view engine', 'html');
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(cookieParser());
 app.use('/public',express.static('public'));
+/*使用session 中间件*/
+app.use(expressSession({
+  secret: 'keyboard cat',
+  resave:true,
+  saveUninitialized:true,
+  cookie: {maxAge: 1000*60*60}
+}));
+
+
+/*页面路由*/
+var users = require('./routes/users');
+/*登录注册 post 接口*/
+var certified  = require('./routes/certified');
+
+users(app);
+certified(app);
 
 app.use('/users', users);
 
@@ -43,6 +54,7 @@ app.use(function(err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
+  console.log(err)
   // render the error page
   res.status(err.status || 500);
   res.render('error');
