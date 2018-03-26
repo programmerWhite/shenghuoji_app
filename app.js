@@ -6,6 +6,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressSession = require('express-session');
 
+var db_connection = require('./routes/tool/DBconnection');
+db_connection.checkDBExit();
+
 var app = express();
 
 // view engine setup

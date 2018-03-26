@@ -111,11 +111,7 @@ app.controller('signPageController', function ($scope,$interval,signPageF) {
                 $scope.authCodeTypeText = null;
             }
 
-            if(data.dataType.emailType == 1 &&
-                data.dataType.passwordType == 1 &&
-                data.dataType.againUserPasswordType == 1 &&
-                data.dataType.authCodeType == 1
-            ){
+            if(!!data.signStatus){
                 noticeDiv("注册成功",2000,function(){
                     location.href = "#/login";
                 });

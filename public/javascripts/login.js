@@ -18,14 +18,12 @@ app.controller('loginController',function($scope,login){
                     $scope.userPasswordText = "密码不正确";
                 }
 
-                if(data.dataType.userType == 1 &&
-                    data.dataType.passwordType == 1
-                ){
+                if(data.loginStatus == "true"){
                     location.href = "#/myHome";
                 }
             }
         });
-    }
+    };
 
     $scope.loginFocus = function(loginType){
         if(loginType == "userName"){
@@ -35,7 +33,8 @@ app.controller('loginController',function($scope,login){
         if(loginType == "password"){
             $scope.userPasswordText = null;
         }
-    }
+    };
+
 });
 
 app.factory("login",function($http,$q){
